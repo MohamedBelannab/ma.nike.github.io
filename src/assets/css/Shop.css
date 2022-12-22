@@ -1,0 +1,91 @@
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th {
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background-color: var(--main-color);
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td button {
+    width: 33px;
+    height: 29px;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+td span {
+    color:#ff523b;
+    font-size: 12px;
+    cursor: pointer;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.total-price table{
+    border-top:3px solid var(--main-color);
+    width: 100%;
+    max-width: 350px;
+}
+td:last-child{
+    text-align: right;
+}
+.vide_cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shop_cont {
+    border: 2px solid var(--main-color);
+    padding: 13px 18px;
+    cursor: pointer;
+}
+.shop_cont:hover{
+    background-color: var(--main-color) ;
+    color: #fff;
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 9px;
+
+}
+.control span{
+    padding: 6px 12px;
+    font-weight: 500;
+    margin-right: 13px;
+    cursor: pointer;
+    background-color:var(--main-color) ;
+    color: #fff;
+}
+.control span:hover{
+    color: #000;
+    font-weight: 500;
+    border: 1px solid var(--main-color)  ;
+    background-color: #fff;
+
+}
