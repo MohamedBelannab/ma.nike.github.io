@@ -2,24 +2,29 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import api from '../../api/Product'
 import formatter from '../currency/Currency'
-import { decrement_cart , increment_cart , remove_cart , cancel  } from '../../Redux/HandleCart'
+import { decrement_cart , increment_cart , remove_cart , cancel , LocalStorageCart  } from '../../Redux/HandleCart'
 
 const Shop_Cart = ({ProShop}) => {
+    
+
     const Tax = 30
     
     const dispatch = useDispatch()
 
    const decrimentPro = (p)=>{
         dispatch(decrement_cart(p))
+        dispatch(LocalStorageCart())
 
    }
    const inrimentPro = (p)=>{
     dispatch(increment_cart(p))
+    dispatch(LocalStorageCart())
 
     }
 
     const remove = (p)=>{
         dispatch(remove_cart(p))
+        dispatch(LocalStorageCart())
 
     }
     const subTotal = ()=>{
@@ -31,15 +36,22 @@ const Shop_Cart = ({ProShop}) => {
 
     }
     const checkout = async ()=>{
-        if(ProShop){
-            ProShop.map((e)=>{
-              try{
-                const res = api.put(`/Products/${e.id}` , {...e , stock : e.stock - e.qt , qt : 1})
-              }catch(err){
-                console.log(`error edite : ${err.message}`)
+        const conf = confirm('confirm your command')
+        if(conf){
+            if(ProShop){
+                ProShop.map((e)=>{
+                  try{
+                    const res = api.put(`/Products/${e.id}` , {...e , stock : e.stock - e.qt , qt : 1})
+                  }catch(err){
+                    console.log(`error edite : ${err.message}`)
+                  }
+                })
               }
-            })
-          }
+
+              alert('your command successfuly')
+
+        }
+        
     }
 
     

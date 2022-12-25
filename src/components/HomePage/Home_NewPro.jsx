@@ -1,13 +1,17 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { add_cart } from '../../Redux/HandleCart';
+import { add_cart, LocalStorageCart } from '../../Redux/HandleCart';
 import formatter from '../currency/Currency';
+import { Link } from 'react-router-dom';
 
 const Home_NewPro = ({Product}) => {
     
     const dispatch = useDispatch()
     const addProduct = (p) =>{
+       
         dispatch(add_cart(p))
+        dispatch(LocalStorageCart())
+        
     }
   return (
     <section className="new product">
@@ -18,7 +22,7 @@ const Home_NewPro = ({Product}) => {
             {
                 Product.slice(Product.length - 8 , Product.length).map((ele , index)=>{
                     return (<div key={index} className="row">
-                    <img src={ele.img} />
+                        <Link to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
                     <h4>{ele.name}</h4>
                     <h5>{formatter.format(ele.price)}</h5>
                     <div className="top">

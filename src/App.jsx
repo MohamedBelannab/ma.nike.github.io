@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react"
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from "react-toastify"
+import './assets/css/Notify.css'
 import Navbar from "./components/layout/Navbar"
 import Footer from "./components/layout/Footer"
 import Home from "./page/Home"
@@ -8,6 +11,8 @@ import { BrowserRouter , Route, Routes } from "react-router-dom"
 import Shop from "./page/Shop"
 import api from './api/Product'
 import New from "./page/New"
+import ProductDetails from "./page/ProductDetails"
+
 
 
 
@@ -32,21 +37,23 @@ function App() {
   return (
   <>
   <BrowserRouter>
+ <ToastContainer/>
   <Navbar/>
   <Routes>
     <Route path="/" element={<Home pro={dataGlobal}  />} />
     <Route path="/new" element={<New pro2={dataGlobal}/>} />
     <Route path="/woman" element={<Woman pro3={dataGlobal}/>} />
     <Route path="/kids" element={<Kids pro4={dataGlobal}/>} />
+    <Route path="/shoes/:id" element={<ProductDetails pro5={dataGlobal}/>} />
     {/* 
-    <Route path="/men" element={<Home/>} />
+    
     
      */}
     <Route path="/shop" element={<Shop/>} />
     <Route path="/YourFavorite" element={<Home/>} />
   </Routes>
-  
   <Footer/>
+ 
   </BrowserRouter>
   
   </>

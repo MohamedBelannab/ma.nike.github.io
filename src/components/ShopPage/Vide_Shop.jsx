@@ -9,7 +9,7 @@ const Vide_Shop = () => {
   }
   return (
     <div className='cart-page vide_cart'>
-        <img width='500px' src={cart} alt="" />
+        <img style={{ 'width' : '500px' }} src={cart} alt="" />
         <div>
             <span onClick={direct} className='shop_cont'>continue shopping</span>
         </div>
