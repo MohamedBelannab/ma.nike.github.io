@@ -4,10 +4,10 @@ const Home_Banner = () => {
   return (
     <section className="banner">
         <div className="banner-img">
-        <img src="img/banner4.jpg" />
+        <img src="../src/assets/image/banner1.webp" />
         </div>
         <div className="banner-img">
-        <img src="img/banner5.jpg" />
+        <img src="../src/assets/image/banner2.webp" />
         </div>
    </section>
   )

@@ -1,41 +1,204 @@
 {
   "Products": [
     {
-      "id": 33,
+      "id": 1,
       "name": "Air Jordan 9 Retro",
-      "cat": "men",
-      "date": "2022-10-12",
-      "price": "150",
-      "stock": 14,
-      "img": "../src/assets/image/nike3.webp",
-      "qt": 1
-    },
-    {
-      "id": 34,
-      "name": "Nike Dunk High",
-      "cat": "men",
-      "date": "2022-10-12",
-      "price": "105",
-      "stock": 3,
-      "img": "../src/assets/image/nike4.webp"
-    },
-    {
-      "id": 35,
-      "name": "Air Jordan 5 Retro Low PSG",
       "cat": "men",
       "date": "2022-10-12",
       "price": "200",
       "stock": 13,
-      "img": "../src/assets/image/nike6.webp"
+      "img": "../src/assets/image/jordan.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/jordan2.webp",
+          "../src/assets/image/jordan3.webp",
+          "../src/assets/image/jordan4.webp",
+          "../src/assets/image/jordan5.webp",
+          "../src/assets/image/jordan6.webp"
+        ],
+        "desc": "Inspired by the shoe originally worn by MJ during the '92 season and summer of basketball, the Air Jordan 7 Retro revives its championship legacy for a new generation of sneakerheads."
+      },
+      "qt": 1
     },
     {
-      "id": 36,
-      "name": "Air Jordan 1 Mid SE",
+      "id": 2,
+      "name": "Air Jordan 1 Mid",
       "cat": "men",
       "date": "2022-10-12",
-      "price": "130",
+      "price": "170",
+      "stock": 3,
+      "img": "../src/assets/image/nike7.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/nike7-1.webp",
+          "../src/assets/image/nike7-2.webp",
+          "../../src/assets/image/nike7-3.webp",
+          "../src/assets/image/nike7-4.webp",
+          "../src/assets/image/nike7-5.webp"
+        ],
+        "desc": "Inspired by the shoe originally worn by MJ during the '92 season and summer of basketball, the Air Jordan 7 Retro revives its championship legacy for a new generation of sneakerheads."
+      },
+      "qt": 1
+    },
+    {
+      "id": 3,
+      "name": "Air Jordan Dub Zero",
+      "cat": "men",
+      "date": "2022-10-12",
+      "price": "160",
+      "stock": 23,
+      "img": "../src/assets/image/nike6.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/nike6--1.webp",
+          "../src/assets/image/nike6-2.webp",
+          "../src/assets/image/nike6-3.webp",
+          "../src/assets/image/nike6-4.webp",
+          "../src/assets/image/nike6-5.webp"
+        ],
+        "desc": "Real talk—people are about to start noticing your kicks. Inspired by the AJ4, this remix features laser-etched art on the upper and visible Air in the sole. With its shiny patent leather that wraps around the shoe, the Dub Zero makes sure you catch the spotlight, and the 3D logo on the back lets everyone know who you're reppin'."
+      },
+      "qt": 1
+    },
+    {
+      "id": 4,
+      "name": "Jordan Delta 3 SP",
+      "cat": "men",
+      "date": "2022-10-12",
+      "price": "98.97",
       "stock": 4,
-      "img": "../src/assets/image/nike5.webp"
+      "img": "../src/assets/image/nike5.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/nike5-1.webp",
+          "../src/assets/image/nike5-2.webp",
+          "../src/assets/image/nike5-3.webp",
+          "../src/assets/image/nike5-4.jpg",
+          "../src/assets/image/nike5-5.webp"
+        ],
+        "desc": "Combining high-end craft with high-tech features, these kicks are the embodiment of cool. Airy ripstop and soft suede pair with a soft interior for a classic look and premium Jordan Brand comfort."
+      },
+      "qt": 1
+    },
+    {
+      "id": 5,
+      "name": "Nike Dunk High",
+      "cat": "men",
+      "date": "2022-10-12",
+      "price": "105",
+      "stock": 14,
+      "img": "../src/assets/image/nike4.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/nike4-1.webp",
+          "../src/assets/image/nike4-2.webp",
+          "../src/assets/image/nike4-3.webp",
+          "../src/assets/image/nike4-4.webp",
+          "../src/assets/image/nike-4-5.webp"
+        ],
+        "desc": "Feel like an '80s-era All-Star in the Nike Dunk High. These classic high-tops are scaled down just right for kids. With a super durable design and OG colors, these are an easy slam dunk."
+      },
+      "qt": 1
+    },
+    {
+      "id": 6,
+      "name": "Nike City Classic",
+      "cat": "woman",
+      "date": "2022-10-12",
+      "price": "125",
+      "stock": 9,
+      "img": "../src/assets/image/woman1.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/woman1-1.webp",
+          "../src/assets/image/woman1-2.webp",
+          "../src/assets/image/woman1-3.webp",
+          "../src/assets/image/woman1-4.webp",
+          "../src/assets/image/woman1-5.webp"
+        ],
+        "desc": "Feel like an '80s-era All-Star in the Nike Dunk High. These classic high-tops are scaled down just right for kids. With a super durable design and OG colors, these are an easy slam dunk."
+      },
+      "qt": 1
+    },
+    {
+      "id": 7,
+      "name": "Nike Air Force 1 '07 SE",
+      "cat": "woman",
+      "date": "2022-10-12",
+      "price": "120",
+      "stock": 10,
+      "img": "../src/assets/image/woman2.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/woman2-1.webp",
+          "../src/assets/image/woman2-2.webp",
+          "../src/assets/image/woman2-3.webp",
+          "../src/assets/image/woman2-4.webp",
+          "../src/assets/image/woman2-5.webp"
+        ],
+        "desc": "Bring on the holiday cheer with this b-ball original. From soft fleece accents to cheerful graphics, its winter-ready details put a fresh spin on what you know best: era-echoing, ‘80s construction and nothin’-but-net style."
+      },
+      "qt": 1
+    },
+    {
+      "id": 8,
+      "name": "Air Force 1 '07 SE",
+      "cat": "woman",
+      "date": "2022-10-12",
+      "price": "89.99",
+      "stock": 9,
+      "img": "../src/assets/image/woman3.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/woman3-1.webp",
+          "../src/assets/image/woman3-2.webp",
+          "../src/assets/image/woman3-3.webp",
+          "../src/assets/image/woman3-4.webp",
+          "../src/assets/image/woman3-5.webp"
+        ],
+        "desc": "The radiance lives on in the Nike Air Force 1 ’07. These kicks put a crafty spin on the legendary style and comfort of a b-ball icon with suede accents and exposed stitching. Take a cue from the embroidered Swoosh design and stitched-through laces and let your own inner creativity shine."
+      },
+      "qt": 1
+    },
+    {
+      "id": 9,
+      "name": "Nike Infinity React 3",
+      "cat": "woman",
+      "date": "2022-10-12",
+      "price": "98.99",
+      "stock": 18,
+      "img": "../src/assets/image/woman4.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/woman4-1.webp",
+          "../src/assets/image/woman4-2.webp",
+          "../src/assets/image/woman4-3.webp",
+          "../src/assets/image/woman4-4.webp",
+          "../src/assets/image/woman4-5.webp"
+        ],
+        "desc": "Still 1 of our most tested shoes, the Nike Infinity React 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you."
+      },
+      "qt": 1
+    },
+    {
+      "id": 10,
+      "name": "Nike Air Force 1 Fontanka",
+      "cat": "woman",
+      "date": "2022-10-12",
+      "price": "97.99",
+      "stock": 0,
+      "img": "../src/assets/image/woman5.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/woman5-1.webp",
+          "../src/assets/image/woman5-2.webp",
+          "../src/assets/image/woman5-3.webp",
+          "../src/assets/image/woman5-4.webp",
+          "../src/assets/image/woman5-5.webp"
+        ],
+        "desc": "The radiance lives on in the Nike Air Force 1 ’07. These kicks put a crafty spin on the legendary style and comfort of a b-ball icon with suede accents and exposed stitching. Take a cue from the embroidered Swoosh design and stitched-through laces and let your own inner creativity shine."
+      },
+      "qt": 1
     }
   ]
 }

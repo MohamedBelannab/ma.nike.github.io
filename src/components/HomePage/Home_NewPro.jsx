@@ -5,6 +5,9 @@ import formatter from '../currency/Currency';
 import { Link } from 'react-router-dom';
 
 const Home_NewPro = ({Product}) => {
+    const shfulle = (d)=>{
+        return [...d].sort(()=> Math.random() - 0.5)
+      }
     
     const dispatch = useDispatch()
     const addProduct = (p) =>{
@@ -20,17 +23,17 @@ const Home_NewPro = ({Product}) => {
         </div>
         <div className="new-content">
             {
-                Product.slice(Product.length - 8 , Product.length).map((ele , index)=>{
+                shfulle(Product).slice(shfulle(Product).length - 8 , shfulle(Product).length).map((ele , index)=>{
                     return (<div key={index} className="row">
-                        <Link to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
-                    <h4>{ele.name}</h4>
+                        <Link className={ele.stock === 0 ? "outStock" : ""} to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
+                    <h4 className={ele.stock===0 ? 'outStock' : ''}>{ele.name}</h4>
                     <h5>{formatter.format(ele.price)}</h5>
-                    <div className="top">
+                    <div className={ele.stock === 0 ? "topStock" : "top"}>
                         <p>{ele.stock}</p>
                     </div>
-                    <div className="bbtn">
+                    {ele.stock === 0 ? "" : <div className="bbtn">
                         <span onClick={()=>{addProduct(ele)}} >Add to cart</span>
-                    </div>
+                    </div>}
                     </div>)
                 })
             }

@@ -77,7 +77,7 @@ const Footer = () => {
             </li>
             </div>
             <div className="contact-box">
-            <h4>fiama</h4>
+            <h4>oxygen</h4>
             <h5>Connect with us</h5>
             <div className="social">
                 <a href="#">

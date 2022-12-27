@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header>
         <Link to="/" className="logo">
-            <img src="img/logo.png" />
+            <img src="../src/assets/image/logo.png" />
         </Link>
         <ul className="navbar">
             <li>

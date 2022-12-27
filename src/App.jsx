@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from "react-toastify"
-import './assets/css/Notify.css'
 import Navbar from "./components/layout/Navbar"
 import Footer from "./components/layout/Footer"
 import Home from "./page/Home"
@@ -12,6 +11,7 @@ import Shop from "./page/Shop"
 import api from './api/Product'
 import New from "./page/New"
 import ProductDetails from "./page/ProductDetails"
+import Men from "./page/Men"
 
 
 
@@ -45,6 +45,7 @@ function App() {
     <Route path="/woman" element={<Woman pro3={dataGlobal}/>} />
     <Route path="/kids" element={<Kids pro4={dataGlobal}/>} />
     <Route path="/shoes/:id" element={<ProductDetails pro5={dataGlobal}/>} />
+    <Route path="/men" element={<Men pro6={dataGlobal}/>} />
     {/* 
     
     

@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
 import {toast} from 'react-toastify'
-import { useEffect } from 'react'
 const itemCart = localStorage.getItem('cart') !== null ? JSON.parse(localStorage.getItem('cart')) : []
 
 const initialState = [...itemCart]

@@ -11,6 +11,11 @@ const Shop_Cart = ({ProShop}) => {
     
     const dispatch = useDispatch()
 
+    const cancelCart = ()=>{
+        dispatch(cancel())
+        dispatch(LocalStorageCart())
+    }
+
    const decrimentPro = (p)=>{
         dispatch(decrement_cart(p))
         dispatch(LocalStorageCart())
@@ -108,7 +113,7 @@ const Shop_Cart = ({ProShop}) => {
         </div>
         <div className='control'>
             <span onClick={()=>checkout()}>checkout</span>
-            <span onClick={()=>{dispatch(cancel())}}>cancel</span>
+            <span onClick={()=>{cancelCart()}}>cancel</span>
         </div>
 
 

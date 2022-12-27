@@ -4,13 +4,13 @@ const Home_Offer = () => {
   return (
     <section className="banner">
         <div className="banner-img">
-            <img src="./src/assets/image/nike.webp" />
+            <img src="../src/assets/image/offre1.webp" />
         </div>
         <div className="banner-img">
-            <img src="./src/assets/image/nike.webp" />
+            <img src="../src/assets/image/offre2.webp" />
         </div>
         <div className="banner-img">
-            <img src="./src/assets/image/nike.webp" />
+            <img src="../src/assets/image/offre3.webp" />
         </div>
     </section>
   )

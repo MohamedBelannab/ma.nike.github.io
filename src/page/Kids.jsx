@@ -12,7 +12,7 @@ const Kids = ({pro4}) => {
         {
             filterKids.map((ele , index)=>{
                 return (<div key={index} className="row">
-                <img src={ele.img} />
+                <Link to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
                 <h4>{ele.name}</h4>
                 <h5>{formatter.format(ele.price)}</h5>
                 <div className="top">

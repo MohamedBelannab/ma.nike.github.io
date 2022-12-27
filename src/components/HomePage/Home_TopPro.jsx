@@ -2,10 +2,9 @@ import React from 'react'
 import formatter from '../currency/Currency'
 import { add_cart } from '../../Redux/HandleCart'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 const Home_TopPro = ({Product}) => {
-    //  const shuffle = (arr)=>{
-    //     return [...arr].sort(()=> Math.random() - 0.5)
-    // }
+
     const dispatch = useDispatch()
     const addProduct = (p) =>{
         dispatch(add_cart(p))
@@ -19,7 +18,7 @@ const Home_TopPro = ({Product}) => {
             {
                 Product && Product.slice(Product.length - 6 , Product.length).map((ele)=>{
                     return (<div key={ele.id} className="row">
-                    <img src={ele.img} />
+                    <Link to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
                     <h4>{ele.name}</h4>
                     <h5>{formatter.format(ele.price)}</h5>
                     <div className="top">

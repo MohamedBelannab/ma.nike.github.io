@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home_Desc = () => {
   return (
@@ -11,9 +12,9 @@ const Home_Desc = () => {
             Make a bouquet and pick up a gift with <br /> your wishes. Deliver to any
             corner of the city.
             </p>
-            <a href="#" className="btn">
+            <Link to='/new' className="btn">
             Pick a Bouquet
-            </a>
+            </Link>
         </div>
     </section>
   )
