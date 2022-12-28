@@ -19,3 +19,14 @@ npm run dev
 ```
 npm run build
 ```
+### Install JSON Server
+
+```
+json-server --watch db.json
+```
+### Start JSON Server
+
+```
+npx json-server --watch data/db.json --port 8000
+```
+
