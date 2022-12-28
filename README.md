@@ -1,6 +1,6 @@
 # website ecommerce in react js
 
-> the project was created by package vitr and data by json-server 
+> the project was created by package vite and data by json-server 
 
 ## Project setup
 
