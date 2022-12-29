@@ -31,11 +31,11 @@ npx json-server --watch data/db.json --port 8000
 ```
 ### description 
 
-[^1]: The website is an e-commerce platform for selling shoes online.
-[^2]:It is built using the React.js JavaScript library.
-[^3]:The homepage features a carousel or slider showcasing featured products.
-[^4]:The navigation menu includes links to different pages on the website, such as the homepage, categories, and collections.
-[^5]:Product pages provide detailed information about each shoe, including photos, descriptions, sizes, colors, prices, and any relevant details.
+* The website is an e-commerce platform for selling shoes online.
+* It is built using the React.js JavaScript library.
+* The homepage features a carousel or slider showcasing featured products.
+* The navigation menu includes links to different pages on the website, such as the homepage, categories, and collections.
+* Product pages provide detailed information about each shoe, including photos, descriptions, sizes, colors, prices, and any relevant details.
 [^6]:Users can add and remove items from their shopping cart and view the total cost before proceeding to checkout.
 [^7]:The checkout page includes a form for users to enter their billing and shipping information, select a payment method, and place their order.
 [^8]:Users can view their orders, update their personal information, and manage their wish lists and notifications on their account page.
