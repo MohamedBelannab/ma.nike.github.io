@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# website ecommerce in react js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> the project was created by package vite and data by json-server 
 
-## Available Scripts
+## Project setup
 
-In the project directory, you can run:
+```
+npm create vite@latest
+```
 
-### `npm start`
+### Compiles and hot-reloads for development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+npm run dev
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Compiles and minifies for production
 
-### `npm test`
+```
+npm run build
+```
+### Install JSON Server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+json-server --watch db.json
+```
+### Start JSON Server
 
-### `npm run build`
+```
+npx json-server --watch data/db.json --port 8000
+```
+### description 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* The website is an e-commerce platform for selling shoes online.
+* It is built using the React.js JavaScript library.
+* The homepage features a carousel or slider showcasing featured products.
+* The navigation menu includes links to different pages on the website, such as the homepage, categories, and collections.
+* Product pages provide detailed information about each shoe, including photos, descriptions, sizes, colors, prices, and any relevant details.
+* Users can add and remove items from their shopping cart and view the total cost before proceeding to checkout.
+* The checkout page includes a form for users to enter their billing and shipping information, select a payment method, and place their order.
+* Users can view their orders, update their personal information, and manage their wish lists and notifications on their account page.
+* The website includes a search function that allows users to find specific products by keyword or filter results by various criteria.
+* The design of the website is responsive, meaning it adjusts to different screen sizes and devices.
+* The website integrates with a payment gateway and shipping carriers to facilitate online transactions and deliveries.
+* The website is built with a flexible and scalable architecture using React.js and other tools, making it easy to maintain and update over time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-*Note: this is a one-way operation. Once you `eject`, you can't go back!*
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) 
