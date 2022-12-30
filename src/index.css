@@ -180,7 +180,7 @@ section{
 	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 	align-items: center;
 	gap: 2.5rem;
-	margin-top: 4.5rem;
+	margin-top: 1.5rem;
 	text-align: center;
 }
 .row{

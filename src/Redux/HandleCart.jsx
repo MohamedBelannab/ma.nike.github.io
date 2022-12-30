@@ -54,10 +54,8 @@ export const CartSlice = createSlice({
       
       const product = action.payload
       const exist = state.find((x)=> x.id === product.id)
-      if(exist.qt=== 1){
+      if(exist.qt){
         return state.filter((ele)=> exist.id !== ele.id)
-      }else{
-        return state.map((ele)=> ele.id === product.id ? {...ele , qt : ele.qt -1} : ele)
       }
       
     },

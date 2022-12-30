@@ -1,10 +1,13 @@
 {
+  "homepage": "https://MohamedBelannab.github.io/ma.nike.github.io",
   "name": "ecommerce",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy" : "npm run bluid" ,
+    "deploy":"gh-pages -d bluid",
     "build": "vite build",
     "preview": "vite preview"
   },

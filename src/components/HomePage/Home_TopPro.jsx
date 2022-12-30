@@ -16,18 +16,18 @@ const Home_TopPro = ({Product}) => {
         </div>
         <div className="new-content">
             {
-                Product && Product.slice(Product.length - 6 , Product.length).map((ele)=>{
-                    return (<div key={ele.id} className="row">
-                    <Link to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
-                    <h4>{ele.name}</h4>
-                    <h5>{formatter.format(ele.price)}</h5>
-                    <div className="top">
-                        <p>{ele.stock}</p>
-                    </div>
-                    <div className="bbtn">
-                        <span onClick={()=>{addProduct(ele)}}>Add to cart</span>
-                    </div>
-                    </div>)
+                Product && Product.slice(Product.length - 6 , Product.length).map((ele , index)=>{
+                    return (<div key={index} className="row">
+                    <Link className={ele.stock === 0 ? "outStock" : ""} to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
+                <h4 className={ele.stock===0 ? 'outStock' : ''}>{ele.name}</h4>
+                <h5>{formatter.format(ele.price)}</h5>
+                <div className={ele.stock === 0 ? "topStock" : "top"}>
+                    <p>{ele.stock}</p>
+                </div>
+                {ele.stock === 0 ? "" : <div className="bbtn">
+                    <span onClick={()=>{addProduct(ele)}} >Add to cart</span>
+                </div>}
+                </div>)
                 })
             }
 

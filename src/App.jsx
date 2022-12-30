@@ -46,10 +46,6 @@ function App() {
     <Route path="/kids" element={<Kids pro4={dataGlobal}/>} />
     <Route path="/shoes/:id" element={<ProductDetails pro5={dataGlobal}/>} />
     <Route path="/men" element={<Men pro6={dataGlobal}/>} />
-    {/* 
-    
-    
-     */}
     <Route path="/shop" element={<Shop/>} />
     <Route path="/YourFavorite" element={<Home/>} />
   </Routes>

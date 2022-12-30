@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { Link  , NavLink} from 'react-router-dom'
 
 const Navbar = () => {
   const lengtPro = useSelector(state => state.cart)
+  const navbar = useRef(null)
+  const menu = useRef(null)
+  const Menu =()=>{
+    menu.current.classList.toggle('bx-x');
+    navbar.current.classList.toggle('active')
+  }
 
+  window.onscroll = () => {
+    menu.current.classList.remove('bx-x');
+    navbar.current.classList.remove('active');
+  };
   return (
     <header>
         <Link to="/" className="logo">
             <img src="../src/assets/image/logo.png" />
         </Link>
-        <ul className="navbar">
+        <ul ref={navbar} className="navbar">
             <li>
             <NavLink to="/">Home</NavLink>
             </li>
@@ -43,7 +53,7 @@ const Navbar = () => {
             <NavLink to="/YourFavorite">
             <i className="bx bx-heart" />
             </NavLink>
-            <div className="bx bx-menu" id="menu-icon" />
+            <div ref={menu} className="bx bx-menu" onClick={()=>{Menu()}} id="menu-icon" />
         </div>
     </header>
   )

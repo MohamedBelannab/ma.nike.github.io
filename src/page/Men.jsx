@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import formatter from '../components/currency/Currency'
 import { add_cart , LocalStorageCart} from '../Redux/HandleCart'
 
+
 const Men = ({pro6}) => {
     const filterMen = pro6.filter((e)=> e.cat === 'men')
     const dispatch = useDispatch()
@@ -14,6 +15,8 @@ const Men = ({pro6}) => {
         
     }
 
+
+
   return (
     <section className="new product cat">
     <div className="center-text">
@@ -23,16 +26,16 @@ const Men = ({pro6}) => {
         {
             filterMen.map((ele , index)=>{
                 return (<div key={index} className="row">
-                <Link to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
-                <h4>{ele.name}</h4>
-                <h5>{formatter.format(ele.price)}</h5>
-                <div className="top">
-                    <p>{ele.stock}</p>
-                </div>
-                <div className="bbtn">
-                    <span onClick={()=>{addProduct(ele)}} >Add to cart</span>
-                </div>
-                </div>)
+                <Link className={ele.stock === 0 ? "outStock" : ""} to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
+            <h4 className={ele.stock===0 ? 'outStock' : ''}>{ele.name}</h4>
+            <h5>{formatter.format(ele.price)}</h5>
+            <div className={ele.stock === 0 ? "topStock" : "top"}>
+                <p>{ele.stock}</p>
+            </div>
+            {ele.stock === 0 ? "" : <div className="bbtn">
+                <span onClick={()=>{addProduct(ele)}} >Add to cart</span>
+            </div>}
+            </div>)
             })
         }
        
