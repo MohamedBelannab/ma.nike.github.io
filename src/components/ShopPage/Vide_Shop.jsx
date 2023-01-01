@@ -5,7 +5,7 @@ import cart from '../../assets/image/cart.svg'
 const Vide_Shop = () => {
   const navigate = useNavigate()
   const direct = () =>{
-    navigate('/')
+    navigate('/new')
   }
   return (
     <div className='cart-page vide_cart'>

@@ -1,0 +1,65 @@
+.content-p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content-p svg {
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: -147px;
+    overflow: visible;
+  }
+  .jumper {
+    fill: none;
+    stroke: #383845;
+    stroke-width: 10px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0, 136.7188415527px;
+    animation: animJumper 1.3s linear infinite;
+  }
+  .jumper.clone {
+    opacity: 0.05;
+    transform: translateY(200px) scaleY(-1);
+  }
+  .circleL {
+    opacity: 0;
+    transform-origin: 47.2px 95.6px;
+    animation: animCircle 1.3s infinite;
+  }
+  .circleR {
+    opacity: 0;
+    transform-origin: 136.2px 95.6px;
+    animation: animCircle 1.3s 0.728s infinite;
+  }
+  @keyframes animJumper {
+    8% {
+      stroke-dasharray: 20.5078262329px, 136.7188415527px;
+    }
+    32% {
+      stroke-dasharray: 41.0156524658px, 136.7188415527px;
+      stroke-dashoffset: -47.8515945435px;
+    }
+    56% {
+      stroke-dasharray: 20.5078262329px, 136.7188415527px;
+      stroke-dashoffset: -116.2110153198px;
+    }
+    64% {
+      stroke-dasharray: 0, 136.7188415527px;
+      stroke-dashoffset: -136.7188415527px;
+    }
+  }
+  @keyframes animCircle {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      transform: scale(3);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

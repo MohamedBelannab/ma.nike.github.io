@@ -12,6 +12,7 @@ import api from './api/Product'
 import New from "./page/New"
 import ProductDetails from "./page/ProductDetails"
 import Men from "./page/Men"
+import Checkout from "./components/ShopPage/Checkout"
 
 
 
@@ -47,6 +48,7 @@ function App() {
     <Route path="/shoes/:id" element={<ProductDetails pro5={dataGlobal}/>} />
     <Route path="/men" element={<Men pro6={dataGlobal}/>} />
     <Route path="/shop" element={<Shop/>} />
+    <Route path="/checkout/*" element={<Checkout/>} />
     <Route path="/YourFavorite" element={<Home/>} />
   </Routes>
   <Footer/>

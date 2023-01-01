@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import api from '../../api/Product'
 import formatter from '../currency/Currency'
+import { useNavigate } from 'react-router-dom'
 import { decrement_cart , increment_cart , remove_cart , cancel , LocalStorageCart  } from '../../Redux/HandleCart'
 
 const Shop_Cart = ({ProShop}) => {
+    const navigate = useNavigate()
     
 
     const Tax = 30
+    let sub = 0
     
     const dispatch = useDispatch()
 
@@ -33,7 +36,7 @@ const Shop_Cart = ({ProShop}) => {
 
     }
     const subTotal = ()=>{
-       let sub = 0
+       
        ProShop.map((e)=>{
         sub += Number(e.price) * Number(e.qt)
        })
@@ -41,27 +44,28 @@ const Shop_Cart = ({ProShop}) => {
 
     }
     const checkout = async ()=>{
-        const conf = confirm('confirm your command')
-        if(conf){
-            if(ProShop){
-                ProShop.map((e)=>{
-                  try{
-                    const res = api.put(`/Products/${e.id}` , {...e , stock : e.stock - e.qt , qt : 1})
-                  }catch(err){
-                    console.log(`error edite : ${err.message}`)
-                  }
-                })
-              }
+        // const conf = confirm('confirm your command')
+        // if(conf){
+        //     if(ProShop){
+        //         ProShop.map((e)=>{
+        //           try{
+        //             const res = api.put(`/Products/${e.id}` , {...e , stock : e.stock - e.qt , qt : 1})
+        //           }catch(err){
+        //             console.log(`error edite : ${err.message}`)
+        //           }
+        //         })
+        //       }
 
-              alert('your command successfuly')
+        //       alert('your command successfuly')
 
+        // }
+        if(ProShop){
+            navigate('/checkout' , {state : {cart : [...ProShop  ] , total : sub , tax : Tax} })
         }
+
         
     }
 
-    
-
-    useEffect(()=>{console.log(subTotal());},[])
   return (
     <section className='cart-page'>
         <table>
