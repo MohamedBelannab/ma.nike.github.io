@@ -25,7 +25,7 @@ const Home_NewPro = ({Product}) => {
             {
                 shfulle(Product).slice(shfulle(Product).length - 8 , shfulle(Product).length).map((ele , index)=>{
                     return (<div key={index} className="row">
-                        <Link className={ele.stock === 0 ? "outStock" : ""} to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
+                        <Link className={ele.stock === 0 ? "outStock " : ""} to={`/shoes/${ele.id}`}><img src={ele.img} /></Link>
                     <h4 className={ele.stock===0 ? 'outStock' : ''}>{ele.name}</h4>
                     <h5>{formatter.format(ele.price)}</h5>
                     <div className={ele.stock === 0 ? "topStock" : "top"}>

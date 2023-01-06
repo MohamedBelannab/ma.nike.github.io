@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import api from '../../api/Product'
 import formatter from '../currency/Currency'
-import { useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import { decrement_cart , increment_cart , remove_cart , cancel , LocalStorageCart  } from '../../Redux/HandleCart'
 
 const Shop_Cart = ({ProShop}) => {
@@ -60,7 +60,7 @@ const Shop_Cart = ({ProShop}) => {
 
         // }
         if(ProShop){
-            navigate('/checkout' , {state : {cart : [...ProShop  ] , total : sub , tax : Tax} })
+            navigate('/checkout' , {state : { total : sub , tax : Tax} })
         }
 
         
@@ -119,6 +119,8 @@ const Shop_Cart = ({ProShop}) => {
             <span onClick={()=>checkout()}>checkout</span>
             <span onClick={()=>{cancelCart()}}>cancel</span>
         </div>
+
+       
 
 
     </section>

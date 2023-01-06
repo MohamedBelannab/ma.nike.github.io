@@ -1,134 +1,61 @@
-import React from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 import '../../assets/css/checkout.css'
-import Paymant from './Paymant';
 import formatter from '../currency/Currency';
+import validate from '../Validate/ValidateCheckout';
+import Checkout_Form from '../Forms/Checkout_Form';
+import Checkoutpay from '../Forms/Paymant';
+import { useSelector } from 'react-redux';
+import api from '../../api/Product'
 
 const Checkout = () => {
  
     const location = useLocation()
-    const ProductCheck = location.state.cart
+    const ProductCheck = useSelector(state => state.cart)
     const Total = location.state.total
     const Tax = location.state.tax
+
+    const [Error , setError] = useState({})
+    const [Auth , setAuth] = useState([])
+    const [check  , setcheck] = useState(false)
     console.log(location.state.total);
+
+    const handleSubmit= (e)=>{
+    e.preventDefault()
+    const data = new FormData(e.target)
+    const dataForm  = Object.fromEntries(data.entries())
+    setError(validate(dataForm))
+    if(validate(dataForm).loading ){
+      setAuth(dataForm)
+      setcheck(true)
+    }
+    
+  }
+
+  const addUser = async()=>{
+    const res = await api.post('/Users' , Auth)
+    if(ProductCheck){
+        ProductCheck.map((e)=>{
+          try{
+            const resPro = api.put(`/Products/${e.id}` , {...e , stock : e.stock - e.qt , qt : 1})
+          }catch(err){
+            console.log(`error edite : ${err.message}`)
+          }
+        })
+      }
+  }
   return (
     <div className='checkout'>
   <div className='head'>
-    <h3>Checkout</h3>
+    <h3>Checkout </h3>
   </div>
   <main>
-    <div className="checkout-form">
-      <form action="#!" method="get">
+ {
+   !check ? <>
+      <div className="checkout-form">
+      <form onSubmit={handleSubmit} action="" method="post">
         <h6>Contact information</h6>
-        <div className="form-control">
-          <label htmlFor="checkout-email">E-mail</label>
-          <div>
-            <span className="fa fa-envelope" />
-            <input
-              type="email"
-              id="checkout-email"
-              name="checkout-email"
-              placeholder="Enter your email..."
-            />
-          </div>
-        </div>
-        <div className="form-control">
-          <label htmlFor="checkout-phone">Phone</label>
-          <div>
-            <span className="fa fa-phone" />
-            <input
-              type="tel"
-              name="checkout-phone"
-              id="checkout-phone"
-              placeholder="Enter you phone..."
-            />
-          </div>
-        </div>
-        <br />
-        <h6>Shipping address</h6>
-        <div className="form-control">
-          <label htmlFor="checkout-name">Full name</label>
-          <div>
-            <span className="fa fa-user-circle" />
-            <input
-              type="text"
-              id="checkout-name"
-              name="checkout-name"
-              placeholder="Enter you name..."
-            />
-          </div>
-        </div>
-        <div className="form-control">
-          <label htmlFor="checkout-address">Address</label>
-          <div>
-            <span className="fa fa-home" />
-            <input
-              type="text"
-              name="checkout-address"
-              id="checkout-address"
-              placeholder="Your address..."
-            />
-          </div>
-        </div>
-        <div className="form-control">
-          <label htmlFor="checkout-city">City</label>
-          <div>
-            <span className="fa fa-building" />
-            <input
-              type="text"
-              name="checkout-city"
-              id="checkout-city"
-              placeholder="Your city..."
-            />
-          </div>
-        </div>
-        <div className="form-group">
-          <div className="form-control">
-            <label htmlFor="checkout-country">Country</label>
-            <div>
-              <span className="fa fa-globe" />
-              <input
-                type="text"
-                name="checkout-country"
-                id="checkout-country"
-                placeholder="Your country..."
-                list="country-list"
-              />
-              <datalist id="country-list">
-                <option value="India" />
-                <option value="USA" />
-                <option value="Russia" />
-                <option value="Japan" />
-                <option value="Egypt" />
-              </datalist>
-            </div>
-          </div>
-          <div className="form-control">
-            <label htmlFor="checkout-postal">Postal code</label>
-            <div>
-              <span className="fa fa-archive" />
-              <input
-                type="numeric"
-                name="checkout-postal"
-                id="checkout-postal"
-                placeholder="Your postal code..."
-              />
-            </div>
-          </div>
-        </div>
-        <div className="form-control checkbox-control">
-          <input
-            type="checkbox"
-            name="checkout-checkbox"
-            id="checkout-checkbox"
-          />
-          <label htmlFor="checkout-checkbox">
-            Save this information for next time
-          </label>
-        </div>
-        <div className="form-control-btn">
-          <button>Continue</button>
-        </div>
+        <Checkout_Form Error={Error} />
       </form>
     </div>
     <div className="checkout-details">
@@ -160,18 +87,18 @@ const Checkout = () => {
         </div>
         <div className="checkout-shipping">
           <h6>Shipping</h6>
-          <p>{formatter.format(Tax)}</p>
+          <p>{ Tax && formatter.format(Tax)}</p>
         </div>
         <div className="checkout-total">
           <h6>Total</h6>
-          <p>{formatter.format(Total)}</p>
+          <p>{ Total && formatter.format(Total)}</p>
         </div>
       </div>
     </div>
+   </> : <Checkoutpay addUser={addUser} />
+ }
   </main>
-  <Routes>
-    <Route path={`paymant`} element={<Paymant/>} />
-  </Routes>
+
 </div>
 
   )

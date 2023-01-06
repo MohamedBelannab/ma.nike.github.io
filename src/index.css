@@ -186,12 +186,15 @@ section{
 .row{
 	position: relative;
 	cursor: pointer;
+	
 }
 .row img{
 	width: 100%;
 	height: auto;
 	margin-bottom: 15px;
+	transition: all 0.2s ease;
 }
+
 .row h4{
 	font-size: 14px;
 	margin-bottom: 5px;

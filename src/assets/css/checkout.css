@@ -63,11 +63,7 @@
     display: flex;
     column-gap: 25px;
   }
-  .checkout main .checkout-form form .checkbox-control {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-  }
+
   .checkout main .checkout-form form .form-control-btn {
     display: flex;
     align-items: center;
@@ -94,6 +90,9 @@
     padding: 20px;
     max-height: 482px;
     overflow-y: scroll;
+  }
+  .checkout main .checkout-details .checkout-details-inner::-webkit-scrollbar{
+    display: none;
   }
   .checkout main .checkout-details .checkout-details-inner .checkout-lists {
     display: flex;
@@ -156,17 +155,13 @@
     font-size: 10px;
     font-weight: 500;
   }
-  .checkout footer {
-    height: 5%;
-    color: #BDBDBD;
-    display: -ms-grid;
-    display: grid;
-    place-items: center;
-    font-size: 12px;
+  
+  div small.error {
+    color: red;
+    padding: 7px 13px;
   }
-  .checkout footer a {
-    text-decoration: none;
-    color: inherit;
+  .info-form{
+    display: flex;
   }
   @media screen and (max-width: 1024px) {
     .checkout {

@@ -6,7 +6,7 @@
       "cat": "men",
       "date": "2022-10-12",
       "price": "200",
-      "stock": 13,
+      "stock": 11,
       "img": "../src/assets/image/jordan.webp",
       "details": {
         "image": [
@@ -26,7 +26,7 @@
       "cat": "men",
       "date": "2022-10-12",
       "price": "170",
-      "stock": 3,
+      "stock": 2,
       "img": "../src/assets/image/nike7.webp",
       "details": {
         "image": [
@@ -46,7 +46,7 @@
       "cat": "men",
       "date": "2022-10-12",
       "price": "160",
-      "stock": 23,
+      "stock": 22,
       "img": "../src/assets/image/nike6.webp",
       "details": {
         "image": [
@@ -66,7 +66,7 @@
       "cat": "men",
       "date": "2022-10-12",
       "price": "98.97",
-      "stock": 4,
+      "stock": 3,
       "img": "../src/assets/image/nike5.webp",
       "details": {
         "image": [
@@ -106,7 +106,7 @@
       "cat": "woman",
       "date": "2022-10-12",
       "price": "125",
-      "stock": 9,
+      "stock": 8,
       "img": "../src/assets/image/woman1.webp",
       "details": {
         "image": [
@@ -126,7 +126,7 @@
       "cat": "woman",
       "date": "2022-10-12",
       "price": "120",
-      "stock": 10,
+      "stock": 0,
       "img": "../src/assets/image/woman2.webp",
       "details": {
         "image": [
@@ -199,6 +199,198 @@
         "desc": "The radiance lives on in the Nike Air Force 1 ’07. These kicks put a crafty spin on the legendary style and comfort of a b-ball icon with suede accents and exposed stitching. Take a cue from the embroidered Swoosh design and stitched-through laces and let your own inner creativity shine."
       },
       "qt": 1
+    },
+    {
+      "id": 11,
+      "name": "Jordan 1 Retro High",
+      "cat": "kids",
+      "date": "2022-10-12",
+      "price": "70",
+      "stock": 12,
+      "img": "../src/assets/image/kids1.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/kids1-1.webp",
+          "../src/assets/image/kids1-2.webp",
+          "../src/assets/image/kids1-3.webp",
+          "../src/assets/image/kids1-4.webp",
+          "../src/assets/image/kids1-5.webp"
+        ],
+        "desc": "Designed specifically for kids, this retro high-top will have your little one looking fly and feeling ready to take on the world, one step at a time. With leather for rugged durability and plush foam underfoot, these shoes are as cool as they are sturdy."
+      },
+      "qt": 1
+    },
+    {
+      "id": 12,
+      "name": "Jordan 1 Mid SE",
+      "cat": "kids",
+      "date": "2022-10-12",
+      "price": "65",
+      "stock": 20,
+      "img": "../src/assets/image/kids2.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/kids2-1.webp",
+          "../src/assets/image/kids2-2.webp",
+          "../src/assets/image/kids2-3.webp",
+          "../src/assets/image/kids2-4.webp",
+          "../src/assets/image/kids2-5.webp"
+        ],
+        "desc": "Celebrate your little all-star with these AJ1s. Metallic leather and bold colors add shimmer and shine to all their off-court looks."
+      },
+      "qt": 1
+    },
+    {
+      "id": 13,
+      "name": "Jordan 11",
+      "cat": "kids",
+      "date": "2022-10-12",
+      "price": "65",
+      "stock": 8,
+      "img": "../src/assets/image/kids3.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/kids3-1.webp",
+          "../src/assets/image/kids3-2.webp",
+          "../src/assets/image/kids3-3.webp",
+          "../src/assets/image/kids3-4.webp",
+          "../src/assets/image/kids3-5.webp"
+        ],
+        "desc": "Celebrate your little all-star with these AJ1s. Metallic leather and bold colors add shimmer and shine to all their off-court looks."
+      },
+      "qt": 1
+    },
+    {
+      "id": 14,
+      "name": "Jordan 1 Mid SE",
+      "cat": "kids",
+      "date": "2022-10-12",
+      "price": "65",
+      "stock": 24,
+      "img": "../src/assets/image/kids4.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/kids4-1.webp",
+          "../src/assets/image/kids4-2.webp",
+          "../src/assets/image/kids4-3.webp",
+          "../src/assets/image/kids4-4.webp",
+          "../src/assets/image/kids4-5.webp"
+        ],
+        "desc": "Celebrate your little all-star with these AJ1s. Metallic leather and bold colors add shimmer and shine to all their off-court looks."
+      },
+      "qt": 1
+    },
+    {
+      "id": 15,
+      "name": "Jordan 1 Mid ",
+      "cat": "kids",
+      "date": "2022-10-12",
+      "price": "65",
+      "stock": 23,
+      "img": "../src/assets/image/kids5.webp",
+      "details": {
+        "image": [
+          "../src/assets/image/kids5-1.webp",
+          "../src/assets/image/kids5-2.webp",
+          "../src/assets/image/kids5-3.webp",
+          "../src/assets/image/kids5-4.webp",
+          "../src/assets/image/kids5-5.webp"
+        ],
+        "desc": "Celebrate your little all-star with these AJ1s. Metallic leather and bold colors add shimmer and shine to all their off-court looks."
+      },
+      "qt": 1
+    }
+  ],
+  "Users": [
+    {
+      "checkoutemail": "mohamedbelannab@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 1
+    },
+    {
+      "checkoutemail": "mohamedbelannab@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 2
+    },
+    {
+      "checkoutemail": "mohamedbelannab@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 3
+    },
+    {
+      "checkoutemail": "mohamedbelannab@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 4
+    },
+    {
+      "checkoutemail": "mohamedbelannab@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 5
+    },
+    {
+      "checkoutemail": "mohamedbelannab@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 6
+    },
+    {
+      "checkoutemail": "mohamedbelannabjjgjg@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 7
+    },
+    {
+      "checkoutemail": "mohamedbelannab@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 8
+    },
+    {
+      "checkoutemail": "mohamedbelannab@gmail.com",
+      "checkoutphone": "0634254757",
+      "checkoutname": "sdsd ddss",
+      "checkoutaddress": "600 Red Hawk Dr",
+      "checkoutcity": "Hiawatha",
+      "checkoutcountry": "Morocco",
+      "checkoutpostal": "122233",
+      "id": 9
     }
   ]
 }

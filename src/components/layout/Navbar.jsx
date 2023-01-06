@@ -47,9 +47,9 @@ const Navbar = () => {
               <span className='counter-shop'>{lengtPro.length}</span>
             </span>
             </NavLink>
-            <NavLink to="/phone">
+            <a href="https://wa.me/+212634254757" target="_blank">
             <i className="bx bx-phone" />
-            </NavLink>
+            </a>
             <NavLink to="/YourFavorite">
             <i className="bx bx-heart" />
             </NavLink>

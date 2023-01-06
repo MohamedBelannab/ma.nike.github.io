@@ -24,7 +24,9 @@ const Home_Blog = ({Product}) => {
                 </a>
                 </div>
             </div>
+            <div>
             <h3>{ele.details.desc}</h3>
+            </div>
             </div>)
                 })
             }

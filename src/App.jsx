@@ -13,6 +13,8 @@ import New from "./page/New"
 import ProductDetails from "./page/ProductDetails"
 import Men from "./page/Men"
 import Checkout from "./components/ShopPage/Checkout"
+import Error404 from "./page/Error404"
+import Checkoutpay from "./components/Forms/Paymant"
 
 
 
@@ -47,10 +49,13 @@ function App() {
     <Route path="/kids" element={<Kids pro4={dataGlobal}/>} />
     <Route path="/shoes/:id" element={<ProductDetails pro5={dataGlobal}/>} />
     <Route path="/men" element={<Men pro6={dataGlobal}/>} />
-    <Route path="/shop" element={<Shop/>} />
-    <Route path="/checkout/*" element={<Checkout/>} />
+    <Route path="/shop" element={<Shop/>} /> 
+    <Route path="payment"element={<Checkoutpay/>} />
     <Route path="/YourFavorite" element={<Home/>} />
+    <Route path="/checkout" element={<Checkout/>} />
+    <Route path="*" element={<Error404/>} />
   </Routes>
+
   <Footer/>
  
   </BrowserRouter>
